@@ -1,3 +1,5 @@
+import math
+
 def converterCoordenadas(lista):
     for i in range(len(lista)):
         lista[i] = [int(str(lista[i]).split(' ')[0]), int(str(lista[i]).split(' ')[1])]
@@ -31,7 +33,8 @@ for cont, coordenada in enumerate(listaCoordenadas):
         pontoMedioY = (coordenadaA[1]+coordenadaB[1])/2
         pontoMedio = [pontoMedioX, pontoMedioY]
         pontosMedios.append(pontoMedio)
+        print("pontos médios: ", pontosMedios)
     #para cada coordenada calcular a distância de todos os pontos médios possíveis
-    
-    coordenadaA = 
-
+    for pm in pontosMedios:
+        distancia = math.sqrt((((pm[0] - coordenadaA[0])**2) + ((pm[1] - coordenadaA[1])**2)))
+        print("coordenada, pm, distancia: ", coordenadaA, pm, distancia)
